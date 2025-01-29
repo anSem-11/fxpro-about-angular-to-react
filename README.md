@@ -1,5 +1,7 @@
 # 📌 FxPro About Page – Angular to React Migration
 
+https://www.fxpro.com/about
+
 This repository contains the redesigned **About** page for FxPro, migrated from Angular to React. The update ensures improved performance, maintainability, and a modern UI/UX experience.
 
 ---
