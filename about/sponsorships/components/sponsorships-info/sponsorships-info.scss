@@ -1,0 +1,30 @@
+@import '~styles/mixins/index';
+
+.sponsorships-info {
+  .ui-animated-info-box {
+
+    @include largeDesktop {
+      gap: var(--spacing-12xl);
+    }
+  }
+
+  .ui-animated-info-box__title-wrapper {
+
+    @include tablet {
+      max-width: 490px;
+    }
+  }
+
+  .ui-animated-info-box__description {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+
+
+    @include tablet {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      max-width: 465px;
+    }
+  }
+}

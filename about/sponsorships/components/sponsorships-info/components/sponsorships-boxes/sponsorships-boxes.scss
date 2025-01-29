@@ -1,0 +1,48 @@
+@import '~styles/mixins/index';
+
+.sponsorships-boxes {
+  &__wrapper {
+    flex-wrap: wrap;
+
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      gap: var(--spacing-l);
+    }
+
+    @include desktop {
+      gap: var(--spacing-11xl);
+    }
+
+    @include largeDesktop {
+      gap: 0;
+    }
+  }
+
+  &__title {
+    color: var(--color-accent);
+    font: var(--font-weight-500) var(--font-size-6xl) / var(--line-height-170) var(--font-family-default);
+    letter-spacing: -0.08em;
+
+    @include tablet {
+      font-size: var(--font-size-8xl);
+    }
+
+    @include desktop {
+      font-size: var(--font-size-10xl);
+    }
+  }
+
+  &__description {
+    color: var(--color-accent);
+    font: var(--font-weight-500) var(--font-size-l) / var(--line-height-130) var(--font-family-default);
+
+    @include desktop {
+      font-size: var(--font-size-semi-l);
+    }
+  }
+}
+
+

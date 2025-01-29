@@ -1,0 +1,98 @@
+@import '~styles/mixins/index';
+
+.sponsorships-ui-hero {
+  position: relative;
+
+  &_documents {
+    margin: var(--spacing-4xl) 0;
+
+    @include tablet {
+      margin: var(--spacing-6xl) 0 var(--spacing-10xl);
+    }
+  }
+
+  &_trading-tools-app {
+    position: relative;
+  }
+
+
+
+  &_invite {
+    background: url('https://direct-website.azureedge.net/assets/img/pages/invite/invite-hero-bg.webp') no-repeat 48%/cover var(--background-alternative);
+  }
+
+  &_about {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--background-opacity);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &_trading-tools-app {
+      padding: 100px 0 150px;
+
+      color: var(--color-alternative);
+
+      @include tablet {
+        padding: 100px 0 90px;
+      }
+    }
+
+
+    &_partners,
+    &_pricing-model {
+      padding: 109px 0 96px;
+
+      color: var(--color-alternative);
+
+      @include tablet {
+        padding: 105px 0 90px;
+      }
+
+      @include desktop {
+        padding: 105px 0 129px;
+      }
+    }
+
+    &_invite {
+      padding: 125px 0 155px;
+
+      color: var(--color-alternative);
+
+      @include largeMobile {
+        padding: var(--spacing-10xl) 0 170px;
+      }
+    }
+
+    &_about {
+      padding: 109px 0 174px;
+
+      color: var(--color-alternative);
+
+      @include tablet {
+        padding: 105px 0 168px;
+      }
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+
+    transform: translateX(-50%);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import '~styles/mixins/index';
+
+.about-addresses {
+  background-color: var(--background-control-default);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+
+    @include desktop {
+      gap: var(--spacing-2xl);
+
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    padding: var(--spacing-2xl) var(--spacing-l);
+
+    background-color: var(--background-alternative);
+
+    color: var(--background-primary);
+
+    @include tablet {
+      padding: var(--spacing-5xl);
+    }
+
+    @include desktop {
+      flex: 1;
+    }
+
+    &_noneu {
+
+      @include desktop {
+        display: flex;
+      }
+    }
+
+    &-logo {
+      margin-bottom: var(--spacing-l);
+
+      width: 120px;
+      height: 120px;
+
+      @include tablet {
+        margin-bottom: var(--spacing-4xl);
+      }
+
+      &_noneu {
+
+        @include desktop {
+          margin-bottom: 0;
+
+          @include dirMarginRight(var(--spacing-6xl));
+        }
+      }
+    }
+
+    &-list {
+      margin: 0;
+      padding: var(--spacing-l) 0 0;
+
+      border-top: 1px solid var(--dark-grey-border);
+
+      list-style-type: none;
+
+      @include tablet {
+        padding-top: var(--spacing-4xl);
+      }
+
+      &_noneu.about-addresses__card-list {
+
+        @include desktop {
+          padding-top: var(--spacing-m);
+
+          border-top: none;
+
+          @include dirPaddingLeft(var(--spacing-6xl));
+
+          border-left: 1px solid var(--dark-grey-border);
+
+          @include rtl {
+            border-left: unset;
+            border-right: 1px solid var(--dark-grey-border);
+          }
+        }
+      }
+    }
+
+    &-item {
+
+      @include tablet {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
+
+    &-title {
+      margin-bottom: var(--spacing-s);
+
+      min-width: 170px;
+
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-500);
+
+      @include tablet {
+        margin-right: var(--spacing-2xl);
+      }
+    }
+
+    &-content {
+      margin-bottom: var(--spacing-m);
+
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-300);
+
+      p {
+        margin-bottom: var(--spacing-m);
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

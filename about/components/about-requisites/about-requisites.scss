@@ -1,0 +1,83 @@
+@import '~styles/mixins/index';
+
+.about-requisites {
+  background-color: var(--background-control-default);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__card {
+    padding: var(--spacing-2xl) var(--spacing-s);
+
+    background-color: var(--background-alternative);
+
+    color: var(--background-primary);
+
+    @include tablet {
+      padding: var(--spacing-5xl);
+    }
+
+    @include desktop {
+      flex-basis: 50%;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+    &-item {
+
+      @include tablet {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-m);
+      }
+    }
+
+    &-title {
+      margin-bottom: var(--spacing-s);
+
+      min-width: 170px;
+
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-500);
+
+      @include tablet {
+        margin-right: var(--spacing-2xl);
+      }
+
+      @include desktop {
+        flex: 1;
+
+        max-width: 170px;
+      }
+    }
+
+    &-content {
+      margin: 0;
+
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-300);
+
+      @include desktop {
+        flex: 1;
+      }
+    }
+  }
+}

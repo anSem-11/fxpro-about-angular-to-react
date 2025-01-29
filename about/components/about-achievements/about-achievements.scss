@@ -1,0 +1,89 @@
+@import '~styles/mixins/index';
+
+.about-achievements {
+  position: relative;
+
+  padding: var(--spacing-5xl) 0 var(--spacing-10xl);
+
+  text-align: center;
+
+  @include tablet {
+    padding: var(--spacing-9xl) 0 var(--spacing-10xl);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list {
+    display: grid;
+
+    margin: 0 auto var(--spacing-3xl);
+    padding: 0;
+
+    list-style-type: none;
+    grid-template-columns: 1fr;
+
+    @include tablet {
+      margin-bottom: var(--spacing-5xl);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "capital years"
+        "platforms instruments"
+        "awards sponsorships"
+        "execution orders";
+      gap: var(--spacing-xl);
+    }
+
+    @include desktop {
+      margin-bottom: var(--spacing-10xl);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "capital years awards sponsorships"
+        "platforms instruments execution orders";
+      gap: var(--spacing-5xl);
+    }
+  }
+
+  &__item {
+    margin-bottom: var(--spacing-l);
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    letter-spacing: -0.05em;
+  }
+
+  &__background-text {
+    position: absolute;
+    top: 215px;
+    left: 50%;
+
+    width: 100%;
+
+    color: var(--background-control-default);
+    font-size: var(--font-size-67);
+    font-weight: var(--font-weight-700);
+    line-height: var(--line-height-100);
+    text-align: center;
+    letter-spacing: -0.05em;
+
+    transform: translateX(-50%);
+
+    @include tablet {
+      top: var(--spacing-9xl);
+
+      font-size: var(--font-size-187);
+    }
+
+    @include desktop {
+      top: 35%;
+
+      font-size: var(--font-size-199);
+
+      transform: translate(-50%, -50%);
+    }
+  }
+}

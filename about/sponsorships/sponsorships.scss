@@ -1,0 +1,68 @@
+@import '~styles/mixins/index';
+@import '~styles/vars/react-vars';
+
+:root {
+  --font-size-35: 35px;
+  --font-size-6xl: 60px;
+  --font-size-8xl: 80px;
+  --font-size-85: 85px;
+  --font-size-93: 93px;
+  --font-size-10xl: 100px;
+  --line-height-75: 75%;
+  --line-height-200: 200%;
+  --spacing-14xl: 140px;
+  --square-size: var(--spacing-s);
+  --animation-padding: var(--spacing-l);
+  --animation-square-size: var(--spacing-s);
+  --animation-square-top-position: 38px;
+  --animation-square-bottom-position: unset;
+  --animation-subtitle-right-position: -5px;
+  --sponsorships-box-color-1: #F8F8F8;
+  --sponsorships-box-color-2: #EBEBEB;
+  --sponsorships-vertical-container-margin: 40px;
+  --sponsorships-main-card-button-background: #FF980033;
+  --sponsorships-main-card-button-background-hover: #965a0033;
+  --sponsorships-main-card-button-color: #FF9800;
+  --sponsorships-container-padding: var(--spacing-s);
+
+  @include tablet {
+    --animation-square-size: var(--spacing-m);
+    --square-size: var(--spacing-m);
+    --animation-padding: var(--spacing-3xl);
+    --animation-square-top-position: 80px;
+    --sponsorships-vertical-container-margin: 100px;
+    --sponsorships-container-padding: var(--spacing-4xl);
+  }
+
+  @include desktop {
+    --sponsorships-container-padding: var(--spacing-m);
+  }
+}
+
+.main-card-margin-extra {
+
+  @include largeMobileStrict {
+    margin-bottom: var(--spacing-6xl);
+  }
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sponsorships-vertical-container {
+  margin-bottom: var(--sponsorships-vertical-container-margin);
+}
+
+.sponsorships-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--sponsorships-container-padding);
+  padding-left: var(--sponsorships-container-padding);
+
+  width: 100%;
+  max-width: 1200px;
+}

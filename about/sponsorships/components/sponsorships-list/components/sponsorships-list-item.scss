@@ -1,0 +1,74 @@
+@import '~styles/mixins/index';
+
+.sponsorships-list-item {
+  &__name-block {
+    h3 {
+      font: var(--font-weight-500) var(--font-size-l) / var(--line-height-140) var(--font-family-default);
+
+      @include tablet {
+        max-width: 225px;
+      }
+    }
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: var(--spacing-s);
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__period {
+    min-width: 80px;
+    flex: 1;
+
+    font: var(--font-weight-default) var(--font-size-s) / var(--line-height-100) var(--font-family-default);
+    text-align: left;
+
+    @include tablet {
+      line-height: var(--line-height-200);
+      text-align: right;
+    }
+  }
+
+  &__text {
+    gap: var(--spacing-s);
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    gap: var(--spacing-m);
+
+    @include tablet {
+      gap: var(--spacing-xl);
+    }
+  }
+
+  &__image {
+    height: 330px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__span-2 {
+
+    @include tablet {
+      grid-column-end: span 2;
+    }
+
+    .sponsorships-list-item__title {
+      max-width: unset;
+    }
+  }
+}

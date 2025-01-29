@@ -1,0 +1,51 @@
+@import '~styles/mixins/index';
+
+.about-flags {
+  padding: 0 0 var(--spacing-5xl);
+
+  @include tablet {
+    padding: 0 0 var(--spacing-10xl);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: var(--spacing-5xl);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: var(--spacing-10xl);
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+      flex: 1;
+    }
+  }
+
+  &__icon {
+    margin-bottom: var(--spacing-2xl);
+
+    width: var(--spacing-4xl);
+    height: var(--spacing-4xl);
+  }
+
+  &__info {
+    font-size: var(--font-size-m);
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

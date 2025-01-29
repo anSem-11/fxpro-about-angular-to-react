@@ -1,0 +1,145 @@
+@import '~styles/mixins/index';
+
+.about-most-trusted {
+  padding: var(--spacing-5xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0;
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 498px;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include desktop {
+      max-width: 670px;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: var(--spacing-5xl) auto 0;
+
+    padding: var(--spacing-5xl) var(--spacing-l);
+
+    background-color: var(--background-accent);
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include tablet {
+      margin: var(--spacing-10xl) auto 0;
+      padding: var(--spacing-5xl);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    &-text {
+      color: var(--background-primary);
+      font-size: var(--font-size-m);
+      text-align: center;
+
+      @include tablet {
+        padding-right: var(--spacing-2xl);
+        padding-left: var(--spacing-2xl);
+
+        border-left: 1px solid var(--color-disabled);
+
+        text-align: unset;
+
+        @include rtl {
+          border-left: none;
+          border-right: 1px solid var(--color-disabled);
+        }
+      }
+
+      @include desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        flex: 1;
+      }
+
+      &:first-of-type {
+        margin-bottom: var(--spacing-l);
+
+        @include desktop {
+          margin-bottom: 0;
+        }
+      }
+
+      &:not(:first-of-type) {
+
+        @include dirPaddingRight(0);
+        @include dirPaddingLeft(var(--spacing-2xl));
+      }
+    }
+  }
+
+  &__award-noneu {
+    margin-bottom: var(--spacing-l);
+
+    @include desktop {
+      margin-bottom: 0;
+
+      @include dirMarginRight(var(--spacing-2xl));
+    }
+  }
+
+  &__award-icon {
+    margin-bottom: var(--spacing-l);
+
+    width: 206px;
+    height: 154px;
+
+    @include desktop {
+      margin-bottom: 0;
+
+      @include dirMarginRight(var(--spacing-2xl));
+    }
+  }
+
+  &__button {
+    span {
+      justify-content: center;
+
+      padding-right: var(--spacing-l);
+      padding-left: var(--spacing-l);
+
+      width: 200px;
+
+      span {
+        padding: 0;
+      }
+    }
+
+    @include tablet {
+      margin-top: auto;
+    }
+  }
+}

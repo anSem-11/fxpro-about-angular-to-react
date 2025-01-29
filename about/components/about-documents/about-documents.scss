@@ -1,0 +1,92 @@
+@import '~styles/mixins/index';
+
+.about-documents {
+  padding: var(--spacing-5xl) 0;
+
+  background-color: var(--background-control-default);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__column-company {
+
+    @include desktop {
+      flex: 1;
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: var(--spacing-2xl);
+
+    min-width: 300px;
+
+    font-size: var(--font-size-m);
+    gap: var(--spacing-s);
+
+    span {
+      color: var(--grey-invest-description);
+    }
+  }
+
+  // after updating width, also update it in about-documents.component.tsx
+  &__brochure-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__title {
+    color: var(--grey-invest-description);
+  }
+
+  &__download {
+    span {
+      color: var(--background-alternative);
+      text-decoration: underline;
+    }
+
+    &-icon {
+      width: 27px;
+      height: 31px;
+    }
+  }
+
+  &__pdf-list {
+    display: flex;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    gap: var(--spacing-m);
+
+    a {
+      width: 100%;
+      max-width: 140px;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 140 / 200;
+    }
+
+    @include tablet {
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      gap: var(--spacing-2xl);
+    }
+  }
+}

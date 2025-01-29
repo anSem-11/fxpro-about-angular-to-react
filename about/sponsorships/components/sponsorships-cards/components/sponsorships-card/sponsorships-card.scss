@@ -1,0 +1,50 @@
+@import '~styles/mixins/index';
+
+.sponsorships-card {
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 570px;
+
+  background-color: var(--sponsorships-box-color-1);
+
+  &__wrapper {
+    padding: var(--spacing-5xl) var(--spacing-3xl);
+    gap: var(--spacing-3xl);
+
+    @include desktop {
+      padding: var(--spacing-5xl) var(--spacing-10xl);
+    }
+  }
+
+  &__text-block {
+    text-align: center;
+    gap: var(--spacing-m);
+  }
+
+  &__title {
+    font: var(--font-weight-600) var(--font-size-2xl) / var(--line-height-120) var(--font-family-default);
+
+    @include desktop {
+      font: var(--font-weight-600) var(--font-size-3xl) / var(--line-height-120) var(--font-family-default);
+    }
+  }
+
+  &__subtitle {
+    font: var(--font-weight-500) var(--font-size-m) / var(--line-height-default) var(--font-family-default);
+  }
+
+  &__description {
+    font: var(--font-weight-default) var(--font-size-s) / var(--line-height-default) var(--font-family-default);
+  }
+
+  &__button {
+    .ui-button-layout_faint {
+      padding: 0 var(--spacing-l);
+
+      border: none;
+    }
+  }
+}
+
+

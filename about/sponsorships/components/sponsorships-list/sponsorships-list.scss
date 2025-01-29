@@ -1,0 +1,34 @@
+@import '~styles/mixins/index';
+
+.sponsorships-list {
+  &__title {
+    margin-bottom: var(--spacing-2xl);
+
+    font: var(--font-weight-600) var(--font-size-3xl) / var(--line-height-120) var(--font-family-default);
+
+    @include tablet {
+      margin-bottom: var(--spacing-5xl);
+    }
+  }
+
+  &__list {
+    gap: var(--spacing-l);
+    row-gap: var(--spacing-5xl);
+    grid-template-columns: 1fr;
+
+    padding-bottom: var(--spacing-s);
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      grid-auto-rows: minmax(300px,auto);
+      row-gap: var(--spacing-6xl);
+
+      padding-bottom: 0;
+    }
+
+    @include desktop {
+      gap: var(--spacing-2xl);
+      row-gap: var(--spacing-6xl);
+    }
+  }
+}

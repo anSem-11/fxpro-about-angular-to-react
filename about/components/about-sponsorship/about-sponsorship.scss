@@ -1,0 +1,137 @@
+@import '~styles/mixins/index';
+
+.about-sponsorship {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: var(--spacing-5xl) 0 500px;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 500px;
+  }
+
+  .container {
+    margin-bottom: var(--spacing-5xl);
+
+    @include tablet {
+      margin-bottom: var(--spacing-10xl);
+    }
+  }
+
+  swiper-container {
+    position: absolute;
+    right: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+
+
+    @include tablet {
+      right: -320px;
+
+      width: 150%;
+    }
+  }
+
+  swiper-slide {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 400px;
+
+    &:not(.swiper-slide-active) {
+
+      @include tablet {
+        width: 170px !important;
+      }
+    }
+
+    img {
+      width: auto;
+      height: 400px;
+      filter: grayscale(100%);
+    }
+
+    a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      height: 100%;
+
+      color: var(--background-primary);
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-500);
+      text-align: center;
+      white-space: nowrap;
+
+      transform: translate(-50%, -50%) rotate(180deg);
+      writing-mode: vertical-lr;
+    }
+
+    .about-sponsorship__icon {
+      display: none;
+    }
+  }
+
+  .swiper-slide-active {
+    min-width: 247px !important;
+
+    @include tablet {
+      width: 570px !important;
+    }
+
+    img {
+      filter: none;
+    }
+
+    a {
+      position: absolute;
+      top: unset;
+      left: var(--spacing-2xl);
+      bottom: var(--spacing-5xl);
+
+      justify-content: flex-start;
+
+      width: 190px;
+      height: auto;
+
+      text-align: left;
+
+      white-space: nowrap;
+
+      transform: none;
+      writing-mode: unset;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .about-sponsorship__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: var(--font-size-xs);
+
+      width: var(--spacing-3xl);
+      height: var(--spacing-3xl);
+
+      background-color: var(--background-brand);
+    }
+
+    .about-sponsorship__icon-arrow {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

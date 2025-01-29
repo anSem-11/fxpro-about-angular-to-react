@@ -1,0 +1,43 @@
+@import '~styles/mixins/index';
+
+.about-invest {
+  padding: var(--spacing-5xl) 0;
+
+  background-color: var(--background-control-default);
+
+  @include desktop {
+    padding: var(--spacing-9xl) 0;
+  }
+
+  &__coat-of-arms-icon {
+    display: block;
+
+    margin: 0 auto var(--spacing-5xl);
+
+    width: 169px;
+    height: 140px;
+  }
+
+  &__description {
+    color: var(--grey-invest-description);
+    font-size: var(--font-size-l);
+    text-align: center;
+  }
+
+  &__logos-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto var(--spacing-5xl);
+
+    width: 100%;
+
+    max-width: 363px;
+    flex-wrap: nowrap;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

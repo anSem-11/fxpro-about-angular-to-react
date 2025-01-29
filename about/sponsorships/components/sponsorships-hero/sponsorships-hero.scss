@@ -1,0 +1,51 @@
+@import '~styles/mixins/index';
+
+.sponsorships-hero {
+  position: relative;
+
+  &__wrapper {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 1170px;
+    height: 480px;
+
+    @include tablet {
+      height: 440px;
+    }
+
+    span {
+      color: var(--color-alternative);
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sponsorships-ui-hero {
+    position: unset;
+
+    margin-bottom: 180px;
+
+    @include largeMobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  .g-hero-title.sponsorships-ui-hero__title {
+
+    @media (min-width: 768px) and (max-width: 875px) {
+      margin-bottom: var(--spacing-s);
+
+      font-size: var(--font-size-93);
+      line-height: var(--line-height-default);
+    }
+  }
+}

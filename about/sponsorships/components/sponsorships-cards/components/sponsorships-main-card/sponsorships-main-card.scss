@@ -1,0 +1,110 @@
+@import '~styles/mixins/index';
+
+.sponsorships-main-card {
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 1200px;
+  height: 280px;
+
+  @include largeMobileStrict {
+    height: calc(100% + 60px);
+  }
+
+  @include tablet {
+    padding: 0 var(--spacing-4xl);
+
+    height: 450px;
+  }
+
+  @include desktop {
+    padding: 0 var(--spacing-m);
+
+    height: 520px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 73%;
+    height: 280px;
+
+    background-color: var(--background-alternative);
+
+    transform: translate(-50%, -50%);
+
+    @include largeMobileStrict {
+      height: calc(100% + 60px);
+    }
+
+    @include tablet {
+      width: 64%;
+      height: 450px;
+    }
+
+    @include desktop {
+      width: 73%;
+      height: 520px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    gap: var(--spacing-l);
+
+    picture {
+      width: 100%;
+    }
+
+    @include tablet {
+      gap: var(--spacing-4xl);
+    }
+
+    @include desktop {
+      gap: 0;
+    }
+  }
+
+  &__logo {
+    width: 172px;
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include desktop {
+      margin: var(--spacing-3xl) 0 var(--spacing-5xl);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__button {
+    .ui-button-layout_passive {
+      padding: 0 var(--spacing-l);
+
+      background-color: var(--sponsorships-main-card-button-background);
+
+      color: var(--sponsorships-main-card-button-color);
+    }
+
+    &:hover {
+      .ui-button-layout_passive {
+        background-color: var(--sponsorships-main-card-button-background-hover);
+      }
+    }
+  }
+}

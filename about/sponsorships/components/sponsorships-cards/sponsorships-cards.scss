@@ -1,0 +1,17 @@
+@import '~styles/mixins/index';
+
+.sponsorships-cards {
+  &__other-cards {
+    flex-direction: column;
+    gap: var(--spacing-s);
+
+    @include tablet {
+      flex-direction: row;
+      gap: var(--spacing-s);
+    }
+
+    @include desktop {
+      gap: var(--spacing-3xl);
+    }
+  }
+}

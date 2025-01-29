@@ -1,0 +1,17 @@
+@import '~styles/mixins/index';
+
+.about-history {
+  padding: var(--spacing-5xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 110px;
+  }
+
+  .container {
+    margin-bottom: var(--spacing-5xl);
+
+    @include tablet {
+      margin-bottom: var(--spacing-10xl);
+    }
+  }
+}
